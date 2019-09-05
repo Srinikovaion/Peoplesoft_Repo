@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('connection') {
+    stage('') {
       steps {
-        input(message: 'Enter Server Name', id: 'Server_Name')
+        sshScript(script: '/tmp/test.sh', failOnError: true, remote: 'oelser3.kovaion.com')
       }
     }
   }
